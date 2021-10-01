@@ -49,3 +49,24 @@ VALUES
 ('Nissan 350Z','Nissan'),
 ('718 Cayman','Porsche'),
 ('Subaru Outback','Subaru');
+
+-- Creation of garage table
+CREATE TABLE garage (
+id INT AUTO_INCREMENT PRIMARY KEY,
+capacity INT,
+gps_x INT,
+gps_y INT,
+name VARCHAR(255),
+description TEXT
+);
+
+-- Creation of employee table
+CREATE TABLE employee (
+id INT AUTO_INCREMENT PRIMARY KEY,
+firstname VARCHAR(255),
+lastname VARCHAR(255),
+email VARCHAR(255),
+phone INT,
+birthdate INT,
+description TEXT
+);
