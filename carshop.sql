@@ -38,7 +38,7 @@ VALUES
 ('¨Fabia Combi','Škoda Auto'),
 ('DeLorean DMC-12','DeLorean Motor Company'),
 ('3/15','BMW Group'),
-('Cybertruck','Tesla')
+('Cybertruck','Tesla'),
 ('Dodge Charger','Stellantis'),
 ('GMC Acadia','General Motors'),
 ('Infiniti','Renault-Nissan-Mitsubishi Alliance'),
@@ -93,3 +93,11 @@ VALUES
 ('Honza', 'Pilař', 'honza.pilar@student.ossp.cz', 741852963, 2151990, 'idk'),
 ('Peter', 'Parker', 'peterparker@hotmail.com', 444222888, 555549, 'Tvůj hodný soused spiderman'),
 ('Bob', 'Ross', 'bobross.painter@gmail.com', 55566622, 02141500, 'Proste malir');
+
+-- Alter table add
+ALTER TABLE employee
+ADD car_id INT;
+
+-- Assign car ID to employee ID
+SET car_id = #
+WHERE id = #;
