@@ -101,3 +101,35 @@ ADD car_id INT;
 -- Assign car ID to employee ID
 SET car_id = #
 WHERE id = #;
+
+-- Update 22/10/2021 = Inserty kam se podíváš
+INSERT INTO garage (capacity, gps_x, gps_y, name, description)
+VALUES
+(24, 1200, 1200, 'Stanoviště F', 'Šestá Garáž'),
+(28, 1400, 1400, 'Stanoviště G', 'Sedmá Garáž'),
+(32, 1600, 1600, 'Staloviště H', 'Osmá Garáž'),
+(36, 1800, 1800, 'Stanoviště CH', 'Devátá Garáž'),
+(40, 2000, 2000, 'Stanoviště I', 'Desátá Garáž'),
+(44, 2200, 2200, 'Stanoviště J', 'Jedenáctá Garáž'),
+(48, 2400, 2400, 'Stanoviště K', 'Dvanáctá Garáž'),
+(42, 2600, 2600, 'Stanoviště L', 'Třináctá Garáž'),
+(46, 2800, 2800, 'Stanoviště M', 'Patnáctá Garáž'),
+(50, 3000, 3000, 'Stanoviště N', 'Šestnáctá Garáž'),
+(54, 3200, 3200, 'Stanoviště O', 'Sedmnáctá Garáž'),
+(58, 3400, 3400, 'Stanoviště P', 'Osmnáctá Garáž'),
+(62, 3600, 3600, 'Stanoviště Q', 'Devaténáctá Garáž'),
+(66, 3800, 3800, 'Stanoviště R', 'Dvacátá Garáž'),
+(70, 4000, 4000, 'Stanoviště S', 'Dvacátá-První Garáž');
+
+INSERT INTO employee (firstname, lastname, email, phone, birthdate, description)
+VALUES 
+('L.', 'Lawliet', 'llawliet@weebmail.jp', 000000, 000000, 'Váš syn je Kira'),
+('Light', 'Yagami', 'lightyagami@weebmail.jp', 858585858, 28021986, 'Ale já nejsem Kira!'),
+('Soichiro', 'Yagami', 'soichiroyagami@weebmail.jp', 123456, 20021950, 'Ne, není!'),
+('Sayu', 'Yagami', 'sayuyagami@weebmail.jp', 654321, 28021986, 'O co sakra jde'),
+('Misa', 'Amaneová', 'misaamane@weebmail.jp', 109876, 12121985, 'Mentální status: Nemůže si představit svět bez Lighta (Jo, to by bylo temné)'),
+('Teru', 'Mikami', 'terumikami@weebmail.jp', 654123, 10101986, 'ODSTRANIT, ODSTRANIT, ODSTRANIT!'),
+('Bin', 'Laden', 'osamabinladen@terroristmail.tr', 582693, 10031957, 'Obávaný terorista který hrával Animal Crossing před svojí smrtí'),
+('Yoshikage', 'Kira', 'yoshikagekira@ilikehands.m', 796454, 30011966, 'VAROVNÁ POZNÁMKA: Pozor, tento zmetek krade ruce!'),
+('Joseph', 'Stalin', 'josephstalin@ussrmail.ru', 741236, 12181878, 'Soudruh?'),
+('Kanna', 'Kamui', 'ŽÁDNÝ_EMAIL', 789654, 000000, 'To... je dráček?');
