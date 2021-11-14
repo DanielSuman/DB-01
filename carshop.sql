@@ -52,7 +52,7 @@ VALUES
 
 -- Creation of garage table
 CREATE TABLE garage (
-id INT AUTO_INCREMENT PRIMARY KEY,
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 capacity INT,
 gps_x INT,
 gps_y INT,
@@ -62,7 +62,7 @@ description TEXT
 
 -- Creation of employee table
 CREATE TABLE employee (
-id INT AUTO_INCREMENT PRIMARY KEY,
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 firstname VARCHAR(255),
 lastname VARCHAR(255),
 email VARCHAR(255),
@@ -94,13 +94,14 @@ VALUES
 ('Peter', 'Parker', 'peterparker@hotmail.com', 444222888, 555549, 'Tvůj hodný soused spiderman'),
 ('Bob', 'Ross', 'bobross.painter@gmail.com', 55566622, 02141500, 'Proste malir');
 
--- Alter table add
-ALTER TABLE employee
-ADD car_id INT;
+-- ALTER TABLE EMPLOYEE CAR_ID COLUMN
+ALTER TABLE employee 
+ADD COLUMN car_id INT UNSIGNED;
 
 -- Assign car ID to employee ID
-SET car_id = #
-WHERE id = #;
+UPDATE employee
+SET car_id=#
+WHERE id=#;
 
 -- Update 22/10/2021 = Inserty kam se podíváš
 INSERT INTO garage (capacity, gps_x, gps_y, name, description)
@@ -133,3 +134,22 @@ VALUES
 ('Yoshikage', 'Kira', 'yoshikagekira@ilikehands.m', 796454, 30011966, 'VAROVNÁ POZNÁMKA: Pozor, tento zmetek krade ruce!'),
 ('Joseph', 'Stalin', 'josephstalin@ussrmail.ru', 741236, 12181878, 'Soudruh?'),
 ('Kanna', 'Kamui', 'ŽÁDNÝ_EMAIL', 789654, 000000, 'To... je dráček?');
+
+
+-- ADD GARAGE_ID COLUMN
+ALTER TABLE car
+ADD COLUMN garage_id INT UNSIGNED;
+
+--ASSIGN CAR ID TO GARAGE ID
+UPDATE car
+SET garage_id=#
+WHERE id=#;
+
+-- FOREIGN KEY car - garage
+ALTER TABLE car
+ADD FOREIGN KEY (garage_id) REFERENCES garage(id);
+
+-- FOREIGN KEY - employee - car
+ALTER TABLE employee 
+ADD FOREIGN KEY (car_id) REFERENCES car(id);
+
