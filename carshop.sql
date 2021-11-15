@@ -175,5 +175,49 @@ VALUES
 ('Centrální Zamykání','Zabezpečení'),
 ('Bluetooth','Hands-Free hovory jsou užitečné');
 
-
+-- UPDATE 11/15/21 PT II
+CREATE TABLE car_accessory (
+    car_id INT UNSIGNED,
+    accessory_id INT UNSIGNED
+)
+-- FOREIGN KEYS
+ALTER TABLE car_accessory
+ADD FOREIGN KEY (car_id) REFERENCES car(id);
+ALTER TABLE car_accessory
+ADD FOREIGN KEY (accessory_id) REFERENCES accessory(id);
+-- INSERT INTO'S 
+INSERT INTO car_accessory 
+VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 1),
+(12, 2),
+(13, 3),
+(14, 4),
+(15, 5),
+(16, 6),
+(17, 8),
+(18, 4),
+(18, 5),
+(18, 3),
+(19, 7),
+(19, 8),
+(19, 9),
+(20, 4),
+(20, 3),
+(20, 2),
+(21, 3),
+(21, 5),
+(21, 6),
+(22, 8),
+(22, 10),
+(22, 9);
 
