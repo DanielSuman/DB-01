@@ -153,3 +153,27 @@ ADD FOREIGN KEY (garage_id) REFERENCES garage(id);
 ALTER TABLE employee 
 ADD FOREIGN KEY (car_id) REFERENCES car(id);
 
+-- UPDATE 11/15/2021
+-- CREATE ACCESSORY TABLE
+CREATE TABLE accessory (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    description TEXT
+);
+
+-- 10X INSERT INTO ACCESSORY
+INSERT INTO accessory (name, description)
+VALUES 
+('Adaptivní Tempomat', 'Lepší tempomat?' ),
+('Vyhřívaná Sedadla', 'Název mluví za vše...'),
+('Panoramatická Střecha','Prostě jinačí typ střechy I guess'),
+('Parkovací Kamera','Oblíbená pomůcka na parkování'),
+('Parkovací Senzory','Další oblíbená pomůcka na parkování'),
+('Satelitní Navigace','Pro navigování po zemi'),
+('Tažné Zařízení','Pokud má vaše auto dobrou sílu, můžete vyprostit auto svého kamaráda z příkopu... A nebo ho tam hodit, to je na vás'),
+('Tempomat','Normální tempomat'),
+('Centrální Zamykání','Zabezpečení'),
+('Bluetooth','Hands-Free hovory jsou užitečné');
+
+
+
