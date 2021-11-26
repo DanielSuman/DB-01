@@ -220,4 +220,26 @@ VALUES
 (22, 8),
 (22, 10),
 (22, 9);
+-- Vypsání jmen, příjmení, emailů a telefonů + připojení aut
+SELECT *
+FROM employee e
+LEFT JOIN car c ON e.car_id = c.id;
+-- Odebrání auta zaměstnanci
+UPDATE employee 
+SET car_id = NULL 
+WHERE id = 1;
 
+-- update 11/26/2021 JOIN
+SELECT e.firstname, e.lastname, c.manufacturer, c.model
+FROM employee e
+JOIN car c ON e.car_id = c.id;
+
+-- join který vypíše i zaměstnance bez auta
+SELECT e.firstname, e.lastname, e.email, e.phone, c.manufacturer, c.model
+FROM employee e
+LEFT JOIN car c ON e.car_id = c.id;
+
+-- join který vypíše auta, garáže a souřadnice
+SELECT c.manufacturer, c.model, g.name, g.gps_x, g.gps_y
+FROM car c
+LEFT JOIN garage g ON c.garage_id = g.id;
