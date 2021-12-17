@@ -243,3 +243,9 @@ LEFT JOIN car c ON e.car_id = c.id;
 SELECT c.manufacturer, c.model, g.name, g.gps_x, g.gps_y
 FROM car c
 LEFT JOIN garage g ON c.garage_id = g.id;
+
+-- update 12/10/2021 propojení příslušenství a aut
+SELECT c.id, c.model, c.manufacturer, a.name, a.description  
+FROM car c 
+JOIN car_accessory c_a ON c.id = c_a.car_id
+JOIN accessory a ON a.id = c_a.accessory_id;
