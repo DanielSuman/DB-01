@@ -249,3 +249,178 @@ SELECT c.id, c.model, c.manufacturer, a.name, a.description
 FROM car c 
 JOIN car_accessory c_a ON c.id = c_a.car_id
 JOIN accessory a ON a.id = c_a.accessory_id;
+
+-- update 12/27/2021 WHERE SPZ, RYCHLOST
+ALTER TABLE car 
+ADD COLUMN spz VARCHAR(255);
+ALTER TABLE car
+ADD COLUMN max_speed INT UNSIGNED;
+ALTER TABLE car
+ADD COLUMN color VARCHAR(255);
+ALTER TABLE car
+ADD COLUMN description TEXT;
+
+UPDATE car 
+SET spz = "S0695D"
+WHERE id = 1;
+UPDATE car 
+SET spz = "DE794O"
+WHERE id = 2;
+UPDATE car 
+SET spz = "SCK259"
+WHERE id = 3;
+UPDATE car 
+SET spz = "14R4KS"
+WHERE id = 4;
+UPDATE car 
+SET spz = "N4Z195"
+WHERE id = 5;
+UPDATE car 
+SET spz = "S89546"
+WHERE id = 6;
+UPDATE car 
+SET spz = "K0K3S5"
+WHERE id = 7;
+UPDATE car 
+SET spz = "CS8965"
+WHERE id = 8;
+UPDATE car 
+SET spz = "CZ658P"
+WHERE id = 9;
+UPDATE car 
+SET spz = "S3XYL8"
+WHERE id = 10;
+UPDATE car 
+SET spz = "URM0MS"
+WHERE id = 11;
+UPDATE car 
+SET spz = "L0LS89"
+WHERE id = 12;
+UPDATE car 
+SET spz = "WS1TF6"
+WHERE id = 13;
+UPDATE car 
+SET spz = "WHM50K"
+WHERE id = 14;
+UPDATE car 
+SET spz = "80SRN4"
+WHERE id = 15;
+UPDATE car 
+SET spz = "WTF420"
+WHERE id = 16;
+UPDATE car 
+SET spz = "50KBTS"
+WHERE id = 17;
+UPDATE car 
+SET spz = "FML9T5"
+WHERE id = 18;
+UPDATE car 
+SET spz = "F4CTS7"
+WHERE id = 19;
+UPDATE car 
+SET spz = "55S668"
+WHERE id = 20;
+UPDATE car 
+SET spz = "019EU7"
+WHERE id = 21;
+UPDATE car 
+SET spz = "S4DB01"
+WHERE id = 22;
+
+-- GOTTA GO FAST
+UPDATE car 
+SET max_speed=186
+WHERE id=1;
+UPDATE car 
+SET max_speed=186
+WHERE id=2;
+UPDATE car 
+SET max_speed=210
+WHERE id=3;
+UPDATE car 
+SET max_speed=210
+WHERE id=4;
+UPDATE car 
+SET max_speed=67
+WHERE id=5;
+UPDATE car 
+SET max_speed=410
+WHERE id=6;
+UPDATE car 
+SET max_speed=325
+WHERE id=7;
+UPDATE car 
+SET max_speed=105
+WHERE id=8;
+UPDATE car 
+SET max_speed=226
+WHERE id=9;
+UPDATE car 
+SET max_speed=130
+WHERE id=10;
+UPDATE car 
+SET max_speed=75
+WHERE id=11;
+UPDATE car 
+SET max_speed=110
+WHERE id=12;
+UPDATE car 
+SET max_speed=175
+WHERE id=13;
+UPDATE car 
+SET max_speed=131
+WHERE id=14;
+UPDATE car 
+SET max_speed=262
+WHERE id=15;
+UPDATE car 
+SET max_speed=100
+WHERE id=16;
+UPDATE car 
+SET max_speed=249
+WHERE id=17;
+UPDATE car 
+SET max_speed=205
+WHERE id=18;
+UPDATE car 
+SET max_speed=170
+WHERE id=19;
+UPDATE car 
+SET max_speed=250
+WHERE id=20;
+UPDATE car 
+SET max_speed=275
+WHERE id=21;
+UPDATE car 
+SET max_speed=130
+WHERE id=22;
+
+-- SELECTY  SPZ
+SELECT * 
+FROM car
+WHERE spz LIKE '%s%';
+-- SELECT SPEED
+SELECT * 
+FROM car
+WHERE max_speed > 120;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
